@@ -40,7 +40,7 @@ public class ConfigClientApplicationTest {
     @Autowired
     private ContextRefresher refresher;
 
-    @Test
+    /*@Test
     public void contextLoads() {
         assertThat(controller.getMessage()).isNotEqualTo("Hello test");
         TestPropertyValues
@@ -49,6 +49,6 @@ public class ConfigClientApplicationTest {
         assertThat(controller.getMessage()).isNotEqualTo("Hello test");
         refresher.refresh();
         assertThat(controller.getMessage()).isEqualTo("Hello test");
-    }
+    }*/
 
 }
