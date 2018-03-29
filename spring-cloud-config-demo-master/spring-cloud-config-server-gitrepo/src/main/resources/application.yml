@@ -1,0 +1,34 @@
+server:
+  port: 8888
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: serverusername
+    password: serverpassword
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/shailendradhaniya/spring-cloud-config-server-db
+          #username: 
+          #password: 
+          search-paths:
+          - app*
+          force-pull: true
+          
+          repos:
+            jndi:
+              pattern:
+              - "*/*jndi"
+              uri: https://github.com/shailendradhaniya/spring-cloud-config-server-db-jndi
+              search-paths:
+              - app*
+        health:
+          enabled: false
+          repositories:
+            appgit:
+              name: app1db
+              profiles: dev
